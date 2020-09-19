@@ -1,0 +1,24 @@
+.cls {
+  height: 450px;
+  border: 1px solid silver;
+}
+
+#div2 {
+  background-image: url(../assets/img/background1.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+#div4 {
+  background-image: url(../assets/img/background2.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+#div6 {
+  background-image: url(../assets/img/background3.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+#div1,
+#div7 {
+  height: 100px;
+}
