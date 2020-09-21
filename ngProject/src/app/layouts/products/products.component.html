@@ -1,2 +1,11 @@
-<p>products works!</p>
-<div class="cls" id="div3">Products</div>
+<ul>
+  <h3 class="text-center">{{ title }}</h3>
+  <li *ngFor="let mobPart of mobParts" class="prod">
+    <p>Product Id: {{ mobPart.prod_id }}</p>
+    <p>Product Name: {{ mobPart.prod_name }}</p>
+    <p *ngIf="0 < mobProduct.productInstock; else outOfStock">
+      Product In stock: {{ mobPart.prodInstock }}
+    </p>
+    <p>Product MRP: {{ mobPart.prodPrice }}</p>
+  </li>
+</ul>

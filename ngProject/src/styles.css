@@ -2,9 +2,11 @@
 .cls {
   height: 450px;
   border: 1px solid silver;
+  color: red;
+  background-color: lavenderblush;
 }
 
-#div2 {
+/*#div2 {
   background-image: url(./assets/img/background1.jpg);
   background-size: 100%;
   background-attachment: fixed;
@@ -18,7 +20,7 @@
   background-image: url(./assets/img/background3.jpg);
   background-size: 100%;
   background-attachment: fixed;
-}
+}*/
 #div1,
 #div7 {
   height: 100px;
