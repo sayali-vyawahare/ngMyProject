@@ -1,8 +1,11 @@
 .prod {
-  color: grey;
+  color: black;
   display: inline-block;
   list-style-type: none;
   margin: 5px;
   padding: 5px;
   border: 1px solid silver;
+}
+.soldOut {
+  background-color: skyblue;
 }

@@ -1,11 +1,19 @@
 <ul>
   <h3 class="text-center">{{ title }}</h3>
-  <li *ngFor="let mobPart of mobParts" class="prod">
+  <li
+    *ngFor="let mobPart of mobParts"
+    class="prod"
+    [ngClass]="{ soldOut: mobPart.sold }"
+  >
     <p>Product Id: {{ mobPart.prod_id }}</p>
     <p>Product Name: {{ mobPart.prod_name }}</p>
-    <p *ngIf="0 < mobProduct.productInstock; else outOfStock">
+    <p *ngIf="0 < mobPart.prodInstock; else outOfStock">
       Product In stock: {{ mobPart.prodInstock }}
     </p>
+    <ng-template #outOfStock>Out of stock for now</ng-template>
     <p>Product MRP: {{ mobPart.prodPrice }}</p>
+    <p [ngStyle]="{ display: mobPart.veg === true ? 'inline-block' : 'none' }">
+      VEG: <img src="../../../assets/img/dot.jfif" width="20px" height="20px" />
+    </p>
   </li>
 </ul>
