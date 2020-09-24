@@ -11,10 +11,27 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { BooksComponent } from './products/books/books.component';
 import { CosmeticsComponent } from './products/cosmetics/cosmetics.component';
 import { MobilesComponent } from './products/mobiles/mobiles.component';
-import { HomeDecorComponent } from './products/home-decor/home-decor.component';
+import { DecorComponent } from './products/decor/decor.component';
+import { OfferPipe } from './pipes/offer.pipe';
+import { SimpleStyleDirective } from './directives/simple-style.directive';
 
 @NgModule({
-  declarations: [FirstComponent, NavComponent, BannerOneComponent, ProductsComponent, BannerTwoComponent, CantactUsComponent, BannerThreeComponent, FooterComponent, BooksComponent, CosmeticsComponent, MobilesComponent, HomeDecorComponent],
+  declarations: [
+    FirstComponent,
+    NavComponent,
+    BannerOneComponent,
+    ProductsComponent,
+    BannerTwoComponent,
+    CantactUsComponent,
+    BannerThreeComponent,
+    FooterComponent,
+    BooksComponent,
+    CosmeticsComponent,
+    MobilesComponent,
+    DecorComponent,
+    OfferPipe,
+    SimpleStyleDirective,
+  ],
   imports: [BrowserModule],
   bootstrap: [FirstComponent],
 })

@@ -1,21 +1,30 @@
 <p>mobiles works!</p>
 <ul>
   <h3 class="text-center">{{ title }}</h3>
-  <h4>We have total {{ calcprod() }} products</h4>
+  <h4 appSimpleStyle>We have total {{ calcprod() }} products</h4>
   <li
     *ngFor="let mobPart of mobParts"
     class="prods"
     [ngClass]="{ soldOut: mobPart.sold }"
   >
     <p>Product Id: {{ mobPart.prod_id }}</p>
-    <p>Product Name: {{ mobPart.prod_name }}</p>
+    <p>Product Name: {{ mobPart.prod_name | uppercase }}</p>
     <p *ngIf="0 < mobPart.prodInstock; else outOfStock">
       Product In stock: {{ mobPart.prodInstock }}
     </p>
 
     <ng-template #outOfStock><p>Out of stock for now</p></ng-template>
 
-    <p>Product MRP: {{ mobPart.prodPrice }}</p>
+    <p>
+      Product MRP:
+      <s style="color: red"
+        ><span style="color: black">{{
+          mobPart.prodPrice | currency: "INR"
+        }}</span></s
+      >
+    </p>
+    <p>Product Offer: {{ mobPart.prodPrice | offer | currency: "INR" }}</p>
+
     <p [ngStyle]="{ display: mobPart.veg === true ? 'inline-block' : 'none' }">
       VEG: <img src="../../../assets/img/dot.jfif" width="20px" height="20px" />
     </p>
