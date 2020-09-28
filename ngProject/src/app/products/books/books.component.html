@@ -1,1 +1,58 @@
 <p>books works!</p>
+<ul>
+  <h3 class="text-center">{{ title }}</h3>
+  <h4 appSimpleStyle>We have total {{ calcprod() }} products</h4>
+  <li
+    *ngFor="let book of books"
+    class="prods"
+    [ngClass]="{ soldOut: book.sold }"
+  >
+    <p>Product Id: {{ book.prod_id }}</p>
+    <p>Product Name: {{ book.prod_name | uppercase }}</p>
+    <p *ngIf="0 < book.prodInstock; else outOfStock">
+      Product In stock: {{ book.prodInstock }}
+    </p>
+
+    <ng-template #outOfStock>
+      <p>Out of stock for now</p>
+    </ng-template>
+
+    <p>
+      Product MRP:
+      <s style="color: red"
+        ><span style="color: black">{{
+          book.prodPrice | currency: "INR"
+        }}</span></s
+      >
+    </p>
+    <p>Product Offer: {{ book.prodPrice | offer | currency: "INR" }}</p>
+
+    <p [ngStyle]="{ display: book.veg === true ? 'inline-block' : 'none' }">
+      VEG: <img src="../../../assets/img/dot.jfif" width="20px" height="20px" />
+    </p>
+    <p [ngSwitch]="book.country">
+      Country:
+      <img
+        *ngSwitchCase="'india'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+        width="24"
+      />
+      <img
+        *ngSwitchCase="'germany'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+        width="24"
+      />
+      <img
+        *ngSwitchCase="'australia'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+        width="24"
+      />
+
+      <img
+        *ngSwitchDefault
+        src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
+        width="24"
+      />
+    </p>
+  </li>
+</ul>

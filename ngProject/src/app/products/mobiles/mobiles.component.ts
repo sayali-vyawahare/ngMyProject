@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MobParts } from './../../model/mob-parts';
+import { MOBPARTS } from './../../data/mock';
+
 @Component({
   selector: 'app-mobiles',
   templateUrl: './mobiles.component.html',
@@ -10,35 +13,7 @@ export class MobilesComponent implements OnInit {
 
   ngOnInit(): void {}
   title = 'Welcome to product section';
-  mobParts = [
-    {
-      prod_id: 10100,
-      prod_name: 'IPHONE',
-      prodInstock: 150,
-      prodPrice: 118000,
-      veg: true,
-      sold: false,
-      country: 'india',
-    },
-    {
-      prod_id: 10200,
-      prod_name: 'Samsung',
-      prodInstock: 50,
-      prodPrice: 18000,
-      veg: true,
-      sold: true,
-      country: 'australia',
-    },
-    {
-      prod_id: 10300,
-      prod_name: 'nokia',
-      prodInstock: 0,
-      prodPrice: 25000,
-      veg: true,
-      sold: false,
-      country: '',
-    },
-  ];
+  mobParts: MobParts[] = MOBPARTS;
 
   calcprod() {
     let sum = 0;

@@ -1,0 +1,12 @@
+.prods {
+  color: black;
+  display: inline-block;
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.soldOut {
+  background-color: lightgreen;
+  color: blue;
+}
