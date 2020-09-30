@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { MobParts } from './../../model/mob-parts';
-import { MOBPARTS } from './../../data/mock';
+import { MOBPARTS } from '../../data/mobPartsMock';
 
 @Component({
   selector: 'app-mobiles',
@@ -11,9 +12,15 @@ import { MOBPARTS } from './../../data/mock';
 export class MobilesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mobParts = MOBPARTS;
+  }
+  ngOnDestroy(): void {
+    this.mobParts = [];
+  }
+
   title = 'Welcome to product section';
-  mobParts: MobParts[] = MOBPARTS;
+  mobParts: MobParts[];
 
   calcprod() {
     let sum = 0;

@@ -1,6 +1,6 @@
-import { MobParts } from './../model/mob-parts';
+import { Books } from '../model/books';
 
-export const MOBPARTS: MobParts[] = [
+export const BOOKS: Books[] = [
   {
     prod_id: 10100,
     prod_name: 'Iphone',
