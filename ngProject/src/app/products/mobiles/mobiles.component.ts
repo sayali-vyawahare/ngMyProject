@@ -36,4 +36,8 @@ export class MobilesComponent implements OnInit {
   upQntt(mobPart) {
     mobPart.qntt++;
   }
+  catchQntt(event) {
+    console.clear();
+    console.log('event: ', event.target.value);
+  }
 }

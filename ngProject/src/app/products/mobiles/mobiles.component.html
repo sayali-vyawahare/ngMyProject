@@ -58,6 +58,12 @@
       <button type="button" class="btn btn-info" (click)="downQntt(mobPart)">
         remove
       </button>
+      <input
+        type="text"
+        [value]="mobPart.qntt"
+        (input)="catchQntt($event)"
+        [(ngModel)]="mobPart.qntt"
+      />
       {{ mobPart.qntt }}
       <button type="button" class="btn btn-info" (click)="upQntt(mobPart)">
         add

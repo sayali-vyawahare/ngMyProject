@@ -1,5 +1,6 @@
 import { FirstComponent } from './app.component';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NavComponent } from './layouts/nav/nav.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
@@ -32,7 +33,7 @@ import { SimpleStyleDirective } from './directives/simple-style.directive';
     OfferPipe,
     SimpleStyleDirective,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   bootstrap: [FirstComponent],
 })
 export class FirstModule {}
