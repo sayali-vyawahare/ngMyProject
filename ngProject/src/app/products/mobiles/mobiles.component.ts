@@ -29,4 +29,11 @@ export class MobilesComponent implements OnInit {
     }
     return sum;
   }
+
+  downQntt(mobPart) {
+    mobPart.qntt--;
+  }
+  upQntt(mobPart) {
+    mobPart.qntt++;
+  }
 }

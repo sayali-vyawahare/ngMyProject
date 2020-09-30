@@ -6,4 +6,5 @@ export class MobParts {
   veg: boolean;
   sold: boolean;
   country: string;
+  qntt: number;
 }

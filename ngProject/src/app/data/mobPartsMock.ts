@@ -9,6 +9,7 @@ export const MOBPARTS: MobParts[] = [
     veg: true,
     sold: false,
     country: 'india',
+    qntt: 0,
   },
   {
     prod_id: 10100,
@@ -18,6 +19,7 @@ export const MOBPARTS: MobParts[] = [
     veg: true,
     sold: true,
     country: 'australia',
+    qntt: 0,
   },
   {
     prod_id: 10100,
@@ -27,5 +29,6 @@ export const MOBPARTS: MobParts[] = [
     veg: true,
     sold: false,
     country: 'india',
+    qntt: 0,
   },
 ];

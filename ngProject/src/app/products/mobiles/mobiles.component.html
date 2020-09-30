@@ -54,5 +54,14 @@
         width="24"
       />
     </p>
+    <p>
+      <button type="button" class="btn btn-info" (click)="downQntt(mobPart)">
+        remove
+      </button>
+      {{ mobPart.qntt }}
+      <button type="button" class="btn btn-info" (click)="upQntt(mobPart)">
+        add
+      </button>
+    </p>
   </li>
 </ul>
