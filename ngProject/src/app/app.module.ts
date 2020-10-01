@@ -1,6 +1,7 @@
 import { FirstComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NavComponent } from './layouts/nav/nav.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
@@ -15,6 +16,9 @@ import { MobilesComponent } from './products/mobiles/mobiles.component';
 import { DecorComponent } from './products/decor/decor.component';
 import { OfferPipe } from './pipes/offer.pipe';
 import { SimpleStyleDirective } from './directives/simple-style.directive';
+import { HomeComponent } from './layouts/home/home.component';
+import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
+import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -32,8 +36,10 @@ import { SimpleStyleDirective } from './directives/simple-style.directive';
     DecorComponent,
     OfferPipe,
     SimpleStyleDirective,
+    HomeComponent,
+    PageNotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   bootstrap: [FirstComponent],
 })
 export class FirstModule {}

@@ -1,4 +1,12 @@
-<div class="cls" id="div1">Nav</div>
-<header>
-  <nav class="navbar navbar-dark"></nav>
-</header>
+<div class="cls" id="div1">
+  Nav
+  <header class="m-2 p-2">
+    <button type="button"><a [routerLink]="['/home']">Home</a></button>
+    <button type="button"><a [routerLink]="['/mobile']">Mobile</a></button>
+    <button type="button"><a [routerLink]="['/books']">Books</a></button>
+    <button type="button">
+      <a [routerLink]="['/cosmetics']">Cosmetics</a>
+    </button>
+    <button type="button"><a [routerLink]="['/decor']">Decor</a></button>
+  </header>
+</div>
