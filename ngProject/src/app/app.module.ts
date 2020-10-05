@@ -19,6 +19,9 @@ import { SimpleStyleDirective } from './directives/simple-style.directive';
 import { HomeComponent } from './layouts/home/home.component';
 import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { MotoComponent } from './products/mobiles/moto/moto.component';
+import { SamsungComponent } from './products/mobiles/samsung/samsung.component';
+import { MobMenuComponent } from './products/mobiles/mob-menu/mob-menu.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
     SimpleStyleDirective,
     HomeComponent,
     PageNotFoundComponent,
+    MotoComponent,
+    SamsungComponent,
+    MobMenuComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   bootstrap: [FirstComponent],
