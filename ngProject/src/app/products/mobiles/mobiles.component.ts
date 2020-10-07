@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { MobParts } from './../../model/mob-parts';
 import { MOBPARTS } from '../../data/mobPartsMock';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-mobiles',
@@ -13,7 +14,9 @@ export class MobilesComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.mobParts = MOBPARTS;
+    // this.mobParts = MOBPARTS;
+    var sharedService = new SharedService();
+    this.mobParts = sharedService.getMobData();
   }
   ngOnDestroy(): void {
     this.mobParts = [];

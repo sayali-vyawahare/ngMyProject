@@ -8,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MotoComponent implements OnInit {
   id;
-
+  name;
   constructor(private activatedRoute: ActivatedRoute) {
     activatedRoute.paramMap.subscribe((paramGroup) => {
       console.clear();
       console.log('paramGroup : ', paramGroup.get('prod_id'));
       this.id = paramGroup.get('prod_id');
+      console.log('paramGroup : ', paramGroup.get('prod_name'));
+      this.name = paramGroup.get('prod_name');
     });
   }
 

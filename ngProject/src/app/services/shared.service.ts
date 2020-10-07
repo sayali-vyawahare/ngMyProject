@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { MOBPARTS } from '../data/mobPartsMock';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SharedService {
-
-  constructor() { }
+  constructor() {}
+  getMobData() {
+    return MOBPARTS;
+  }
 }

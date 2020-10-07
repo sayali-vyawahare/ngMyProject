@@ -20,7 +20,9 @@ const appRoutes: Routes = [
     children: [
       { path: '', component: MobilesComponent },
       { path: 'moto', component: MotoComponent },
-      { path: 'moto/prod_id', component: MotoComponent },
+      { path: 'moto/:prod_id', component: MotoComponent },
+      { path: 'moto/:prod_name', component: MotoComponent },
+
       { path: 'samsung', component: SamsungComponent },
     ],
   },

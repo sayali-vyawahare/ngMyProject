@@ -22,6 +22,7 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { MotoComponent } from './products/mobiles/moto/moto.component';
 import { SamsungComponent } from './products/mobiles/samsung/samsung.component';
 import { MobMenuComponent } from './products/mobiles/mob-menu/mob-menu.component';
+import { SharedService } from './services/shared.service';
 
 @NgModule({
   declarations: [
@@ -47,5 +48,6 @@ import { MobMenuComponent } from './products/mobiles/mob-menu/mob-menu.component
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   bootstrap: [FirstComponent],
+  providers: [SharedService],
 })
 export class FirstModule {}
