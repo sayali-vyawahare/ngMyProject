@@ -12,7 +12,7 @@ export const MOBPARTS: MobParts[] = [
     qntt: 0,
   },
   {
-    prod_id: 10100,
+    prod_id: 10101,
     prod_name: 'nokia',
     prodInstock: 10,
     prodPrice: 152000,
@@ -22,7 +22,7 @@ export const MOBPARTS: MobParts[] = [
     qntt: 0,
   },
   {
-    prod_id: 10100,
+    prod_id: 10102,
     prod_name: 'Iphone',
     prodInstock: 50,
     prodPrice: 118000,
