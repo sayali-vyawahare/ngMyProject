@@ -12,18 +12,25 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class MobilesComponent implements OnInit {
   totProds: number = 0;
-  constructor() {}
 
   ngOnInit(): void {
     // this.mobParts = MOBPARTS;
-    var sharedService = new SharedService();
-    this.mobParts = sharedService.getMobData();
+    // var sharedService = new SharedService();
+    // this.mobParts = sharedService.getMobData();
+    // this.totProds = sharedService.calcProds(this.mobParts);
+    // this.mobParts = this.sharedService.getMobData();
 
-    this.totProds = sharedService.calcProds(this.mobParts);
+    this.sharedService.getMobData().subscribe((res) => {
+      console.log(res);
+      console.log(res['data']);
+      this.mobParts = res['data'];
+      this.totProds = this.sharedService.calcProds(this.mobParts);
+    });
   }
   ngOnDestroy(): void {
     this.mobParts = [];
   }
+  constructor(private sharedService: SharedService) {}
 
   title = 'Welcome to product section';
   mobParts: MobParts[];

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MOBPARTS } from '../data/mobPartsMock';
 
@@ -5,9 +6,10 @@ import { MOBPARTS } from '../data/mobPartsMock';
   providedIn: 'root',
 })
 export class SharedService {
-  constructor() {}
+  constructor(private httpCilent: HttpClient) {}
   getMobData() {
-    return MOBPARTS;
+    // return MOBPARTS;
+    return this.httpCilent.get('../../assets/api/mob-data.json');
   }
 
   calcProds(prods) {
