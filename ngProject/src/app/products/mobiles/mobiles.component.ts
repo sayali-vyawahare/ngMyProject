@@ -11,12 +11,15 @@ import { SharedService } from 'src/app/services/shared.service';
   styleUrls: ['./mobiles.component.css'],
 })
 export class MobilesComponent implements OnInit {
+  totProds: number = 0;
   constructor() {}
 
   ngOnInit(): void {
     // this.mobParts = MOBPARTS;
     var sharedService = new SharedService();
     this.mobParts = sharedService.getMobData();
+
+    this.totProds = sharedService.calcProds(this.mobParts);
   }
   ngOnDestroy(): void {
     this.mobParts = [];
@@ -25,13 +28,13 @@ export class MobilesComponent implements OnInit {
   title = 'Welcome to product section';
   mobParts: MobParts[];
 
-  calcprod() {
-    let sum = 0;
-    for (let mobPart of this.mobParts) {
-      sum = sum + mobPart.prodInstock;
-    }
-    return sum;
-  }
+  // calcprod() {
+  //   let sum = 0;
+  //   for (let mobPart of this.mobParts) {
+  //     sum = sum + mobPart.prodInstock;
+  //   }
+  //   return sum;
+  // }
 
   downQntt(mobPart) {
     mobPart.qntt--;

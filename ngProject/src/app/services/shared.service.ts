@@ -9,4 +9,13 @@ export class SharedService {
   getMobData() {
     return MOBPARTS;
   }
+
+  calcProds(prods) {
+    let sum = 0;
+
+    for (let prod of prods) {
+      sum += prod.prodInstock;
+    }
+    return sum;
+  }
 }
