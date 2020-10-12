@@ -24,6 +24,8 @@ import { SamsungComponent } from './products/mobiles/samsung/samsung.component';
 import { MobMenuComponent } from './products/mobiles/mob-menu/mob-menu.component';
 import { SharedService } from './services/shared.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './dashboard/login/login.component';
+import { DashComponent } from './dashboard/dash/dash.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     MotoComponent,
     SamsungComponent,
     MobMenuComponent,
+    LoginComponent,
+    DashComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   bootstrap: [FirstComponent],
