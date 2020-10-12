@@ -12,5 +12,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  login(uname, pass) {
+    console.log('LoginComponent -> login -> pass', pass);
+    console.log('LoginComponent -> login -> uname', uname);
 
+}
 }

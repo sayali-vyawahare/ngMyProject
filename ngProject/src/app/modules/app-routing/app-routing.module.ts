@@ -10,6 +10,8 @@ import { DecorComponent } from 'src/app/products/decor/decor.component';
 import { MotoComponent } from 'src/app/products/mobiles/moto/moto.component';
 import { SamsungComponent } from 'src/app/products/mobiles/samsung/samsung.component';
 import { MobMenuComponent } from 'src/app/products/mobiles/mob-menu/mob-menu.component';
+import { LoginComponent } from "./../../dashboard/login/login.component";
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +31,8 @@ const appRoutes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'cosmetics', component: CosmeticsComponent },
   { path: 'decor', component: DecorComponent },
+  { path: 'login', component: LoginComponent },
+
   { path: '**', component: PageNotFoundComponent },
 ];
 

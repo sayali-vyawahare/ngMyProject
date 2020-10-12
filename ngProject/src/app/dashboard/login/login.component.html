@@ -1,1 +1,6 @@
-<p>login works!</p>
+<h1 align="center">login works!</h1>
+
+<input type="text" placeholder="username" value="admin" #uname />
+<input type="password" placeholder="password" value="admin" #pass />
+
+<button (click)="login(uname.value, pass.value)">Login</button>
