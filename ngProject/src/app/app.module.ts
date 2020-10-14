@@ -26,6 +26,9 @@ import { SharedService } from './services/shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './dashboard/login/login.component';
 import { DashComponent } from './dashboard/dash/dash.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TempFormComponent } from './forms/temp-form/temp-form.component';
+import { ReactFormComponent } from './forms/react-form/react-form.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +53,10 @@ import { DashComponent } from './dashboard/dash/dash.component';
     MobMenuComponent,
     LoginComponent,
     DashComponent,
+    TempFormComponent,
+    ReactFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
   bootstrap: [FirstComponent],
   providers: [SharedService],
 })
