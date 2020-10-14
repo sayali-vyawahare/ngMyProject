@@ -12,5 +12,11 @@ export class TempFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  log(tempVar) {
+    console.log(tempVar);
+    console.log(tempVar.value);
+  }
+  submitForm(formTempvar) {
+    console.log('formTempvar : ', formTempvar);
+  }
 }

@@ -1,13 +1,22 @@
+<div class="w-100 h-50">
+<form #formTempvar="ngForm" (ngSubmit)="submitForm(formTempvar)">
 <div class="container">
 <h2>temp-form works!</h2>
 <hr>
-<form>
+<!-- <form > -->
 <div class="input-field">
     <label for="username">Username</label>
-    <input type="text" ngModel name="name" #tempVar="ngModel" (keyup)="log(tempVar)" required>
+    <input type="text" ngModel name="name" #tempVar="ngModel" (keyup)="log(tempVar)" required  minlength="3"
+        pattern="Angular">
     <div style="color: red;" *ngIf="tempVar.touched && !tempVar.valid">
     Something went wrong...!
-    </div>
+    <div *ngIf="tempVar.errors.required">required</div>
+    <div *ngIf="tempVar.errors.minlength">minlength</div>
+    <div *ngIf="tempVar.errors.pattern">pattern</div>
+</div>
+</div>
+<input type="submit" class="btn btn-success" [disabled]="!formTempvar.valid">
+<!-- </form> -->
 </div>
 </form>
 </div>
