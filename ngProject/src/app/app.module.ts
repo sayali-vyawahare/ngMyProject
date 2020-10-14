@@ -1,6 +1,6 @@
 import { FirstComponent } from './app.component';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NavComponent } from './layouts/nav/nav.component';
@@ -56,7 +56,7 @@ import { ReactFormComponent } from './forms/react-form/react-form.component';
     TempFormComponent,
     ReactFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule,ReactiveFormsModule],
   bootstrap: [FirstComponent],
   providers: [SharedService],
 })

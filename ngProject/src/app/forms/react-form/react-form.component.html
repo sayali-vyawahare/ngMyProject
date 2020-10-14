@@ -1,1 +1,21 @@
-<p>react-form works!</p>
+<div class="container">
+    <h3>react-form works!</h3>
+
+    <form [formGroup]="formObj">
+        <div class="input-field col s12">
+            <label>uname</label>
+            <input type="text" formControlName="uNameObj" />
+            <div *ngIf="
+          formObj.get('uNameObj').touched && formObj.get('uNameObj').invalid
+        " style="color: red">
+                Error...!
+            </div>
+        </div>
+
+        <div class="input-field col s12">
+            <label>Password</label>
+
+            <input type="password" formControlName="passObj" class="validate" />
+        </div>
+    </form>
+</div>
